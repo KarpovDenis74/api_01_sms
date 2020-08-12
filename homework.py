@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 
 def get_status(user_id):
-    load_dotenv()
     vk_token = os.getenv('VK_TOKEN')
     vk_api = 'https://api.vk.com/method/'
     vk_metod = 'users.get'
@@ -34,7 +33,6 @@ if __name__ == "__main__":
     vk_id = input("Введите id ")
     while True:
         if get_status(vk_id) == 1:
-            print('статус =1')
             sms_sender(f'{vk_id} сейчас онлайн!')
             break
         time.sleep(5)
