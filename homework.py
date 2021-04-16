@@ -4,6 +4,8 @@ import requests
 from twilio.rest import Client
 from dotenv import load_dotenv
 
+import telegram
+
 
 def get_status(user_id):
     vk_token = os.getenv('VK_TOKEN')
